@@ -1,25 +1,30 @@
 # City Information Assistant
 
-A simplified Java Spring Boot application that provides weather, time, and basic facts about cities worldwide.
+A simplified Java Spring Boot application that provides **weather, time, and basic facts** about cities worldwide.
 
 ## Features
 
-- Get current weather information for any city
-- Get local time information with timezone details
-- Get basic facts about cities from Wikipedia
-- RESTful API endpoints
-- Concurrent processing for better performance
-- Health check endpoint
+- 🌦️ Get current **weather** information for any city (via OpenWeatherMap)
+- ⏰ Get local **time information** with timezone details (via WorldTimeAPI)
+- 📖 Get basic **facts about cities** from Wikipedia
+- ⚡ RESTful API endpoints
+- 🔀 Concurrent processing for better performance
+- ❤️ Health check endpoint
+- 🐳 Docker support for easy deployment
 
 ## Prerequisites
 
-- Java 17 or higher
-- Maven 3.6 or higher
-- OpenWeatherMap API key (free registration at https://openweathermap.org/api)
+- Java **17** or higher
+- Maven **3.6** or higher
+- OpenWeatherMap **API key** (free registration at [openweathermap.org/api](https://openweathermap.org/api))
 
 ## Setup
 
-1. Clone/extract this project
+1. Clone this project:
+   ```bash
+   git clone https://github.com/rishabhkatyal60/city-information-assistant.git
+   cd city-information-assistant
+   ```
 2. Get your OpenWeatherMap API key
 3. Update `src/main/resources/application.properties`:
    ```properties
