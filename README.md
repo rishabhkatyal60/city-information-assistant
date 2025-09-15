@@ -70,26 +70,24 @@ GET http://localhost:8080/api/city-info/London
 
 ```json
 {
-  "city": "London",
-  "weather": {
-    "description": "light rain",
-    "temperature": 15.5,
-    "feelsLike": 14.2,
-    "humidity": 78,
-    "icon": "10d",
-    "cityName": "London"
-  },
-  "time": {
-    "currentTime": "2025-09-13T14:30:00+01:00",
-    "timezone": "Europe/London",
-    "utcOffset": "+01:00",
-    "dayOfWeek": "6"
-  },
-  "facts": {
-    "name": "London",
-    "description": "London is the capital and largest city of England and the United Kingdom...",
-    "extract": "London is the capital and largest city of England..."
-  }
+   "city": "London",
+   "weather": {
+      "description": "scattered clouds",
+      "temperature": 13.48,
+      "feelsLike": 12.82,
+      "humidity": 74,
+      "icon": "03d",
+      "cityName": "London"
+   },
+   "time": null,
+   "facts": {
+      "name": "London",
+      "country": null,
+      "description": "London is the capital and largest city of both England and the United Kingdom, with a population of 9,841,000 in 2025. Its wider metropolitan area is the largest in Western Europe, with a population of 15.1 million. London stands on the River Thames in southeast England, at the head of a 50-mile (80 km) tidal estuary down to the North Sea, and has been a major settlement for nearly 2,000 years. Its ancient core and financial centre, the City of London, was founded by the Romans as Londinium and has retained its medieval boundaries. The City of Westminster, to the west of the City of London, has been the centuries-long host of the national government and parliament. London grew rapidly in the 19th century, becoming the world's largest city at the time. Since the 19th century the name \"London\" has referred to the metropolis around the City of London, historically split between the counties of Middlesex, Essex, Surrey, Kent and Hertfordshire, which since 1965 has largely comprised the administrative area of Greater London, governed by 33 local authorities and the Greater London Authority.",
+      "population": null,
+      "extract": "London is the capital and largest city of both England and the United Kingdom, with a population of 9,841,000 in 2025. Its wider metropolitan area is the largest in Western Europe, with a population of 15.1 million. London stands on the River Thames in southeast England, at the head of a 50-mile (80 km) tidal estuary down to the North Sea, and has been a major settlement for nearly 2,000 years. Its ancient core and financial centre, the City of London, was founded by the Romans as Londinium and has retained its medieval boundaries. The City of Westminster, to the west of the City of London, has been the centuries-long host of the national government and parliament. London grew rapidly in the 19th century, becoming the world's largest city at the time. Since the 19th century the name \"London\" has referred to the metropolis around the City of London, historically split between the counties of Middlesex, Essex, Surrey, Kent and Hertfordshire, which since 1965 has largely comprised the administrative area of Greater London, governed by 33 local authorities and the Greater London Authority."
+   },
+   "error": null
 }
 ```
 
