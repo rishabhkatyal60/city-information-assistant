@@ -21,7 +21,6 @@ public class TimeService {
             .build();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    // Timezone mapping for major cities
     private final Map<String, String> cityTimezones;
 
     public TimeService() {
@@ -57,7 +56,6 @@ public class TimeService {
                 .uri(URI.create(url))
                 .header("User-Agent", "City-Assistant/1.0")
                 .header("Accept", "application/json")
-                // Removed the "Connection" header - it's restricted in Java HttpClient
                 .timeout(Duration.ofSeconds(10))
                 .GET()
                 .build();
@@ -77,7 +75,6 @@ public class TimeService {
             time.setTimezone(json.get("timezone").asText());
             time.setUtcOffset(json.get("utc_offset").asText());
 
-            // Handle day_of_week safely
             if (json.has("day_of_week")) {
                 time.setDayOfWeek(json.get("day_of_week").asText());
             }
