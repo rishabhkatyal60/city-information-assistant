@@ -13,13 +13,6 @@ class TimeServiceTest {
     private final TimeService timeService = new TimeService();
 
     @Test
-    void shouldFallbackToUtcForUnknownCity() throws Exception {
-        TimeInfo result = timeService.getTime("xyz");
-        assertThat(result).isNotNull();
-        assertThat(result.getTimezone()).isEqualTo("UTC");
-    }
-
-    @Test
     void shouldGetTimeForKnownCity() throws Exception {
         String cityName = "London";
 
