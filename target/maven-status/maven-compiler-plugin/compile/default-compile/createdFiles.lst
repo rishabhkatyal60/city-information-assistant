@@ -1,0 +1,11 @@
+com/cityassistant/CityInformationAssistantApplication.class
+com/cityassistant/model/CityFacts.class
+com/cityassistant/service/WeatherService.class
+com/cityassistant/service/CityInformationService.class
+com/cityassistant/model/WeatherInfo.class
+com/cityassistant/controller/CityController.class
+com/cityassistant/model/CityInfoResponse.class
+com/cityassistant/model/TimeInfo.class
+com/cityassistant/service/TimeService.class
+com/cityassistant/model/CityInfoRequest.class
+com/cityassistant/service/WikipediaService.class
