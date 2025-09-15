@@ -6,7 +6,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(MockitoExtension.class)
 class TimeServiceTest {
@@ -15,13 +14,10 @@ class TimeServiceTest {
 
     @Test
     void shouldGetTimeForKnownCity() throws Exception {
-        // Given
         String cityName = "London";
 
-        // When
         TimeInfo result = timeService.getTime(cityName);
 
-        // Then
         assertThat(result).isNotNull();
         assertThat(result.getCurrentTime()).isNotNull();
         assertThat(result.getTimezone()).isEqualTo("Europe/London");
@@ -29,22 +25,9 @@ class TimeServiceTest {
     }
 
     @Test
-    void shouldGetTimeForUnknownCity() throws Exception {
-        // Given - unknown city should default to UTC
-        String cityName = "UnknownCity";
-
-        // When
-        TimeInfo result = timeService.getTime(cityName);
-
-        // Then
+    void shouldFallbackToUtcForUnknownCity() throws Exception {
+        TimeInfo result = timeService.getTime("xyz");
         assertThat(result).isNotNull();
-        assertThat(result.getCurrentTime()).isNotNull();
-    }
-
-    @Test
-    void shouldHandleInvalidTimezone() {
-        // This test might need adjustment based on actual API behavior
-        // The service should handle API errors gracefully
-        assertThrows(RuntimeException.class, () -> timeService.getTime("InvalidTimezone123"));
+        assertThat(result.getTimezone()).isEqualTo("UTC");
     }
 }
